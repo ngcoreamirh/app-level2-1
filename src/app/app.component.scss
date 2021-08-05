@@ -1,0 +1,228 @@
+@import '../assets/styles/_colors';
+// فایل رنگ هامون رو ایمپورت میکنیم
+
+// css به نحوه سلکتورها دقت کنید که چقدر ساختارمند و قابل فهم تره نسبت به 
+// دقت کنید که بعضی فونت سایز هارو به صورت 
+// مقداردهی کردیم rem
+// 1rem = html font size
+
+header {
+    direction: ltr;
+    background: linear-gradient(to left,$Black,$Gray,$Black);
+    box-shadow: 1px 1px 3px $Black;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 140px;
+    &:hover {
+        #logo-image {
+            border:none;
+            filter: drop-shadow(2px 2px 8px $White);
+        }
+    }
+
+    #logo-image {
+        position: absolute;
+        top: 20px;
+        width: 100px;
+        height: 100px;
+        background: url('/assets/images/logo-thumb.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: .2s ease;
+    }
+
+    .main {
+        flex-grow: 1;
+        .title {
+            font-size: 1.5rem;
+            text-align: center;
+            color: $White;
+        }
+        .description {
+            font-size: .8rem;
+            text-align: center;
+            color: $Light_Gray;
+        }
+        .description-yellow {
+            @extend .description; // از کلاس بالایی ارث بری کردیم و فقط رنگش رو تغییر دادیم
+            color: $Yellow;
+        }
+        .link-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            .link {
+                display: inline-flex;
+                flex-wrap: wrap;
+                align-items: center;
+                color: $Light_Gray;
+                gap: 10px;
+                a {
+                    transition: .2s !important;
+                    font-size: .8rem;
+                    background-color: $Dark_Gray;
+                    padding: 1px 25px;
+                    border-radius: 9px;   
+                }
+                a.telegram {
+                    &:hover {
+                        background-color: $Blue;
+                        color: $White;
+                    }
+                }
+                a.github {
+                    &:hover {
+                        background-color: $White;
+                        color: $Black;
+                    }
+                }
+                a.stackblitz {
+                    &:hover {
+                        background-color: $White;
+                        color: $Blue;
+                    }
+                }
+               
+            }
+        }
+    }  
+}
+
+.section-title {
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: $Black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+
+.box-panel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .box-item {
+        margin: .2% .2% .6% .2%;
+        width: 49%;
+        background-color: $Dark_Gray;
+        border-radius: 18px;
+        >.title {
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0px 2px 5px $Black;
+            border-radius: 18px;
+        }
+    }
+    .box-item1 {
+        @extend .box-item;
+    }
+    .box-item2 {
+        @extend .box-item;
+    }
+    .box-item3 {
+        @extend .box-item;
+    }
+    .box-item4 {
+        @extend .box-item;
+    }
+    .box-item5 {
+        @extend .box-item;
+    }
+    .box-item6 {
+        @extend .box-item;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ..........Responsive Styles........... */
+// Small Screens
+@media screen and (max-width: 1024px) {
+    .box-panel {
+        .box-item {
+            width: 80%;
+        }
+    }
+}
+
+// Tablet
+@media screen and (max-width: 767px) {
+    .box-panel {
+        .box-item {
+            width: 90%;
+        }
+    }
+}
+
+// Mobile
+@media screen and (max-width: 575px) {
+    header {
+        margin: 0;
+        #logo-image {
+          width: 85px;
+          height: 85px;
+          position: relative !important;
+          top: 0;
+          margin: 10px auto;
+        }
+        .main {
+            .link-wrapper {
+                .link {
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .box-panel {
+        padding: 10px;
+        .box-item {
+            width: 100%;
+            .title {
+                background-color: unset;
+            }
+        }
+    }
+}
+
+footer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    div {
+        border: 2px solid $Light_Gray;
+        border-radius: 100px;
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            object-fit: cover;
+            object-position: top;
+            border-radius: 100px;
+            width: 130px;
+            height: 130px;
+        }
+    }
+}

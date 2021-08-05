@@ -1,0 +1,21 @@
+@import '../../../assets/styles/colors';
+
+.main {
+    min-height: 450px;
+    padding: 10px 20px;
+    .title {
+        font-size: .9rem;
+        padding: 6px;
+        background:linear-gradient(to left,$Dark_Gray,$Gray,$Dark_Gray);
+        color: $Light_Gray;
+        text-align: center;
+    }
+    label {
+        color: $Orange;
+    }
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

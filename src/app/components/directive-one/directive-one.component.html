@@ -1,0 +1,69 @@
+<div class="main">
+
+  <p class="title">ngIf*</p>
+  <div>
+    <label>وضعیت تأهل؟ </label>
+    <select [(ngModel)]="maritalStatusSelected">
+      <option value="">یک مورد را انتخاب کنید</option>
+      <option value="1">مجرد</option>
+      <option value="2">نامزد</option>
+      <option value="3">متاهل</option>
+    </select>
+    <input type="text" *ngIf="maritalStatusSelected == '1'" placeholder="دلیل عدم ازدواج">
+    <input type="text" *ngIf="maritalStatusSelected == '2'" placeholder="نام نامزد خود را وارد کنید">
+    <input type="text" *ngIf="maritalStatusSelected == '3'" placeholder="نام همسر خود را وارد کنید">
+
+    <input type="text" *ngIf="maritalStatusSelected == '2' || maritalStatusSelected == '3'" [(ngModel)]="dateOfMarriage"
+           placeholder="تاریخ عقد را وارد کنید">
+    <small *ngIf="dateOfMarriage == '' && maritalStatusSelected == '2' || maritalStatusSelected == '3'">
+      تاریخ عقد نمی تواند خالی باشد
+    </small>
+  </div>
+
+  <br>
+
+  <p class="title">ngFor*</p>
+  <div>
+    <label>لیست کاربران: </label>
+    <div *ngFor="let user of users ; let i = index">
+      <span class="mark4">{{ i }}</span>
+      <span class="mark1"> <sup>نام: </sup> {{ user.fullName }} </span>
+      <span class="mark2"> <sup>تحصیلات: </sup> {{ user.levelOfEducation }} </span>
+      <span class="mark3"> <sup>همراه: </sup> {{ user.phone }} </span>
+      <br><br>
+    </div>
+  </div>
+  <small>وضعیت خدمت: </small><br>
+  <select>
+    <option value="">وضعیت را انتخـــاب کنیــد</option>
+    <option *ngFor="let item of soldieryStatusList">{{item}}</option>
+  </select>
+
+  <br>
+
+  <p class="title">[ngSwitch]</p>
+  <div>
+    <label>شهر محل سکونت: </label>
+    <select [(ngModel)]="citySelected">
+      <option value="">یک مورد را انتخاب کنید</option>
+      <option value="tehran">تهران</option>
+      <option value="shiraz">شیراز</option>
+      <option value="ghom">قم</option>
+    </select>
+    <label> کد شهر: </label>
+    <span [ngSwitch]="citySelected">
+      <span *ngSwitchCase="'tehran'">021</span>
+      <span *ngSwitchCase="'shiraz'">071</span>
+      <span *ngSwitchCase="'ghom'">025</span>
+      <span *ngSwitchDefault>_ _ 0</span>
+    </span>
+  </div>
+
+  <br>
+
+  <p class="title">کاربرد ngStyle و ngClass در مبحث Attribiute Directive مشابه [style] و [class] در Property Binding هست
+    و با همون ها میشه به اهداف مورد نظر رسید.
+    به همین دلیل از ذکر اون خودداری میکنیم
+  </p>
+ 
+</div>

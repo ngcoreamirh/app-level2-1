@@ -1,0 +1,40 @@
+<div class="main">
+  <p class="title">
+   خیلی از مواقع لازمه که ما از صفحه ی لاجیک، یک المنت از صفحه html رو مستقیما دریافت کنیم
+   و مقادیری رو ازش بخونیم یا بهش بدیم، که این مبحث رو تو js هم مشاهده کرده اید.
+   در ادامه سه روش به این منظور ارائه شده.
+  </p>
+
+  <p class="title">استفاده از viewChild@</p>
+  <p class="text-center" #PTag>این یک متن تستی می باشد</p>
+  <div>
+    <small>اندازه فونت:</small>
+    <input type="number" #NumberInp max="30">
+    <small>انتخاب رنگ:</small>
+    <input type="color" #ColorInp>
+    <button (click)="changeColor()" class="btn1">اعمال تنظیمات</button>
+  </div>
+  <br>
+
+  <p class="title">استفاده از کلاس Renderer2 به منظور امنیت بیشتر</p>
+  <p class="text-center" #PTag2>این یک متن تستی می باشد</p>
+  <div>
+    <small>اندازه فونت:</small>
+    <input type="number" #NumberInp2 max="30">
+    <small>انتخاب رنگ:</small>
+    <input type="color" #ColorInp2>
+    <button (click)="changeColor2()" class="btn1">اعمال تنظیمات</button>
+  </div>
+  <br>
+
+  <p class="title">استفاده از روش javascript</p>
+  <p class="text-center" id="PTag3">این یک متن تستی می باشد</p>
+  <div>
+    <small>اندازه فونت:</small>
+    <input type="number" id="NumberInp3" max="30">
+    <small>انتخاب رنگ:</small>
+    <input type="color" id="ColorInp3">
+    <button (click)="changeColor3()" class="btn1">اعمال تنظیمات</button>
+  </div>
+  <br>
+</div>

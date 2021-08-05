@@ -1,0 +1,61 @@
+<div class="main">
+  <p class="title">
+    از style binding کم تر استفاده میشه. سعی کنید با class binding کار کنید.
+    رو تصویر سوم همزمان property binding و event binding پیاده شده
+  </p>
+  <div class="img-panel">
+
+    <div>
+      <img [src]="imgFolderUrl + 'img1.jpg' " [style]="borderStyle">
+      <div class="caption">
+        property & style binding
+      </div>
+    </div>
+
+    <div>
+      <img [src]="imgFullUrl" [style.borderColor]="'silver'">
+      <div class="caption">
+        property & style binding
+      </div>
+    </div>
+
+    <div>
+      <img [src]="imgFullUrl" [class]="isToggle? 'img-border' : ''">
+      <div class="caption">
+        <span>تم عادی</span>
+        <div class="switch">
+          <div class="wrapper">
+            <input id="dn" type="checkbox" />
+            <label class="toggle" for="dn" (click)="toggleSwitch()"><span class="toggle--handler"></span></label>
+          </div>
+        </div>
+        <span>تم ویژه</span>
+      </div>
+      <div class="caption">
+        class binding
+      </div>
+    </div>
+    
+  </div>
+
+  <br>
+  <p class="title">
+    میتونیم تو هر کدوم یه متد رو هم فراخونی کنیم. مقادیر dark و light رو به متد پاس دادیم.
+  </p>
+  <div>
+    <p [class]="setColorTheme('dark')">
+      متن تستی
+    </p>
+  </div>
+  <div>
+    <p [class]="setColorTheme('light')">
+      متن تستی
+    </p>
+  </div>
+  <br>
+  
+  <p class="title">نمونه دیگری از  property binding . پراپرتی های type و value رو بایند کردیم</p>
+  <div>
+    <input [type]="inputType" [value]="inputValue"> تایپ: {{inputType}}
+  </div>
+</div>

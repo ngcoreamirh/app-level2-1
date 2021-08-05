@@ -1,0 +1,18 @@
+<div class="main">
+  <p class="title">منظور از data binding انتقال اطلاعات بین صفحه تمپلیت (html) و صفحه لاجیک (typescript) هست</p>
+  <p class="title">1- روش <u>string interpolation</u> (از ts به html):</p>
+  <p>
+    <label>نام:</label> {{name}} --- <label>کدملی:</label> {{MelliCode}} --- 
+    <label>متاهل:</label> {{isMarried}}
+  </p>
+  
+  <p class="title">2- روش <u>Two Way Data Binding</u> یا همون ngModel (دو طرفه):</p>
+  <small>شمـــاره همــراه: </small><br>
+  <input type="text" [(ngModel)]="phoneNumber" placeholder="شماره همراه را وارد کنید"><br>
+  <small>آدرس منــــــزل: </small><br>
+  <input type="text" [(ngModel)]="address" placeholder="آدرس را وارد کنید"><br>
+  <p><label>شماره همراه:</label> {{phoneNumber}}</p>
+  <p><label>آدرس منزل:</label> {{address}}</p>
+
+  <p class="title">3- روش <u>local refrence</u> یا <u>template variable</u> (از html به ts) رو هم تو بخش event binding ببینید</p>
+</div>

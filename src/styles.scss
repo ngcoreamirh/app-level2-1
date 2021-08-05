@@ -1,0 +1,291 @@
+@import 'assets/styles/_colors';
+@import 'assets/styles/fonts';
+
+// تو این فایل معمولا استایل های سراسری رو تعریف یا ایمپورت میکنیم
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 13.5px;
+    font-family: IRANSansWeb;
+    scroll-behavior: smooth;
+}
+body {
+    direction: rtl;
+    min-height: 100vh;
+    line-height: 24px;
+    padding: 0px;
+    margin: 0px;
+    background-color: $Black;
+    color: $White;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $Gray;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $Icon_Color;
+    }
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+button {
+    font-family: IRANSansWeb;
+    background-color: transparent;
+    color: $White;
+    font-size: .9rem;
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 9px;
+    transition: .2s;
+    &:disabled {
+        background-image: none !important;
+        background-color: silver !important;
+        cursor: default !important;
+    }
+}
+input:not(input[type="color"]) {
+    background-color: $Light_Black;
+    color: $White;
+    font-family: IRANSansWeb;
+    font-size: .9rem;
+    padding: 5px 0px;
+    border: 1px solid $Light_Gray;
+    border-radius: 9px;
+    text-align: center;
+    &:focus {
+        outline: none;
+        border: 1px solid $White;
+    }
+}
+input[type="number"] {
+    width: 60px;
+}
+input[type="color"] {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    &::-webkit-color-swatch-wrapper {
+        padding: 0; 
+    }
+    &::-webkit-color-swatch {
+        border: none;
+        border-radius: 100%;
+    }
+}
+select {
+    @extend input;
+    option {
+        text-align: center;
+    }
+}
+input[type="radio"] {
+    position: relative;
+    top: 4px;
+}
+u {
+    text-decoration:none;
+    padding: 0 3px;
+    border-radius: 5px;
+    background-color: $Dark_Gray;
+}
+.mark {
+    padding: 2px 8px 1px 8px;
+    border-radius: 10px;
+    color: white;
+}
+.mark1 {
+    @extend .mark;
+    background: linear-gradient(to right, #3171e9, #67c0db);
+}
+.mark2 {
+    @extend .mark;
+    background: linear-gradient(to right, #53af4b, #45ca93);
+}
+.mark3 {
+    @extend .mark;
+    background: linear-gradient(to right, #c20152, #fe6969);
+}
+.mark4 {
+    @extend .mark;
+    background: linear-gradient(to right, #cfac0c, #fbfe69);
+    color: $Black;
+}
+.mark5 {
+    @extend .mark;
+    background-color: $Dark_White;
+    color: $Black;
+}
+.mark6 {
+    @extend .mark;
+    background-color: $Black;
+    color: $White;
+}
+.btn1 {
+    border: 1px solid $Blue;
+    &:hover {
+        background-color: $Blue;
+    }
+}
+.text-center {
+    text-align: center;
+}
+
+
+/* ..........Responsive Styles........... */
+// Small Screens
+@media screen and (max-width: 1024px) {
+
+}
+
+// Tablet
+@media screen and (max-width: 767px) {
+
+}
+
+// Mobile
+@media screen and (max-width: 575px) {
+    html {
+        font-size: 12px;
+    }
+    body {
+        background-image: unset;
+    }
+}
+
+
+
+
+
+
+
+
+.switch {
+    label > * {
+        transform: translateZ(0) scale(1, 1);
+      }
+      
+      .wrapper > * {
+        cursor: pointer;
+      }
+      
+      .wrapper {
+        width: 42px;
+        height: 20px;
+        background: #F1F1F1;
+        box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 75px;
+      }
+      .wrapper .toggle--handler {
+        background: linear-gradient(to bottom, #468EFF, #2B68FF);
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        box-shadow: 0px 5px 40px rgba(106, 81, 245, 0.938);
+        border-radius: 60px;
+        position: relative;
+        left: 1px;
+        z-index: 2;
+        transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      }
+      .wrapper .toggle--handler:after {
+        content: "";
+        border-radius: 60px;
+        background: linear-gradient(to bottom, #F5515F, #CD2942);
+        opacity: 0;
+        transition: all 200ms;
+      }
+      .wrapper .toggle--handler:before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 60px;
+        background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>assets/icons/cross</title><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M0 0h24v24H0z"/><path d="M13.414 11.96l6.546-6.546L18.545 4 12 10.545 5.455 4 4.04 5.414l6.546 6.546-6.89 6.89 1.414 1.413 6.89-6.89 6.89 6.89 1.414-1.414-6.89-6.89z" fill="#FFF"/></g></svg>');
+        transition: all 200ms;
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      .wrapper:after {
+        content: "";
+        width: 80px;
+        height: 2px;
+        background: #E5E5E5;
+        pointer-events: none;
+      }
+      input {
+        position: absolute;
+        left: -999em;
+        display: none;
+      }
+      input:checked + .toggle .toggle--handler {
+        transform: translateX(-23px);
+        background: linear-gradient(to bottom, #F5515F, #CD2942);
+        box-shadow: 0px 5px 40px rgb(255, 70, 70);
+      }
+      input:checked + .toggle .toggle--handler:after {
+        opacity: 1;
+      }
+      input:checked + .toggle .toggle--handler:before {
+        background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>assets/icons/cross copy</title><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M0 0h24v24H0z"/><path fill="#FFF" d="M8.293 16.707l.707.707.707-.707 11-11-1.414-1.414-11 11h1.414l-4-4-1.414 1.414z"/></g></svg>');
+        z-index: 5;
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+}
+
+
+
+.btn-flip {
+    $speed: 0.5s;
+	opacity: 1;
+	outline: 0;
+	position: relative;
+	text-align: center;
+	letter-spacing: 1px;
+	display: inline-block;
+	text-decoration: none;
+
+	&:hover {
+		&:after {
+			opacity: 1;
+			transform: translateY(0) rotateX(0);
+		}
+
+		&:before {
+			opacity: 0;
+			transform: translateY(50%) rotateX(90deg);
+		}
+	}
+
+	&:after {
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		display: block;
+		transition: $speed;
+		position: absolute;
+		content: attr(data-back);
+		transform: translateY(-50%) rotateX(90deg);
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+		opacity: 1;
+		display: block;
+		transition: $speed;
+		position: relative;
+		content: attr(data-front);
+		transform: translateY(0) rotateX(0);
+	}
+}
+

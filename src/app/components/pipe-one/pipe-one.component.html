@@ -1,0 +1,49 @@
+<div class="main">
+  <p class="title">
+    با pipe ها میتونیم نحوه نمایش یک مقدار رو تو صفحه تمپلیت تغییر بدیم.
+    تو مثال های پایین کاربرد برخی از پایپ هارو نشون دادیم
+  </p>
+
+  <div>
+      <label>مقدار: </label>
+      <span class='mark5'>{{ ' 1600000 '}}</span> 
+      <span class="mark6"> با پایپ number میشه: </span> 
+      <span class='mark5'>{{ ' 1600000 ' | number}}</span><br>
+    
+      <label>مقدار: </label>
+      <span class='mark5'>{{ ' 12.638467846 ' }}</span>
+      <span class="mark6"> با پایپ number:2.2-5 میشه: </span> 
+      <span class='mark5'>{{ ' 12.638467846 ' | number:'2.2-5' }}</span><br>
+      
+      <label>مقدار: </label>
+      <span class='mark5'>{{ ' 0.7 ' }}</span>
+      <span class="mark6"> با پایپ percent میشه: </span> 
+      <span class='mark5'>{{ ' 0.7 ' | percent }}</span><br>
+
+      <label>مقدار: </label>
+      <span class='mark5'>{{ date }}</span>
+      <span class="mark6"> با پایپ date میشه: </span> 
+      <span class='mark5'>{{ date | date }}</span><br>
+
+      <label>مقدار: </label>
+      <span class='mark5'>{{ date }}</span>
+      <span class="mark6"> با پایپ date:shortDate میشه: </span> 
+      <span class='mark5'>{{ date | date:'shortDate' }}</span><br>
+
+      <label>مقدار: </label>
+      <span class='mark5'>{{ date }}</span>
+      <span class="mark6"> با پایپ date:shortTime میشه: </span> 
+      <span class='mark5'>{{ date | date:'shortTime' }}</span><br>
+
+      <label>مقدار: </label>
+      <span class='mark5'>{{ ' this is title ' }}</span>
+      <span class="mark6"> با پایپ titlecase میشه: </span> 
+      <span class='mark5'>{{ ' this is title ' | titlecase }}</span><br>
+
+      <p class="title">یک مقدار json یا یک object رو میشه با پایپ <span class="mark4">json</span> نمایش داد:</p> 
+      <pre style="direction: ltr;" class="mark6">{{ json | json }}</pre>
+      <p class="title">اگه پایپ <span class="mark4">json</span> رو نزاریم به صورت [object,object] نشون میده</p> 
+      
+  </div>
+
+</div>

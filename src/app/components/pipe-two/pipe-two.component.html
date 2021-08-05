@@ -1,0 +1,47 @@
+<div class="main">
+    <p class="title">
+      میتونیم پایپ های اختصاصی خودمون رو بسازیم. به مثال پایین توجه کنید.
+      یک اموجی درباره نمره دریافتی جلوی نمره بر حسب نمره نمایش میدیم.
+      این رو میشد به ngIf هم هندل کرد.
+    </p>
+
+    <div>
+        <label>نمره ریاضی: </label> 
+        <span class='mark5'>{{ 2.5 }}</span>
+        <span class="mark6"> با پایپ EmojiToScorePipe میشه: </span> 
+        <span class='mark5'>{{ 2.5 | EmojiToScorePipe }}</span><br>
+    
+        <label>نمره ریاضی: </label> 
+        <span class='mark5'>{{ 9 }}</span>
+        <span class="mark6"> با پایپ EmojiToScorePipe میشه: </span> 
+        <span class='mark5'>{{ 9 | EmojiToScorePipe }}</span><br>
+
+        <label>نمره ریاضی: </label> 
+        <span class='mark5'>{{ 14 }}</span>
+        <span class="mark6"> با پایپ EmojiToScorePipe میشه: </span> 
+        <span class='mark5'>{{ 14 | EmojiToScorePipe }}</span><br>
+
+        <label>نمره ریاضی: </label> 
+        <span class='mark5'>{{ 20 }}</span>
+        <span class="mark6"> با پایپ EmojiToScorePipe میشه: </span> 
+        <span class='mark5'>{{ 20 | EmojiToScorePipe }}</span><br>
+
+        <label>نمره ریاضی: </label> 
+        <span class='mark5'>{{ 21 }}</span>
+        <span class="mark6"> با پایپ EmojiToScorePipe میشه: </span> 
+        <span class='mark5'>{{ 21 | EmojiToScorePipe }}</span><br>
+    </div>
+       
+    <div>
+        <p class="title">میتونیم به پایپ هامون پارامتر هم پاس بدیم</p>
+        <label>مقدار: </label>
+        <span class='mark5'>{{ 25 }}</span>
+        <span class="mark6"> با پایپ calculate:sqrt میشه: </span> 
+        <span class='mark5'>{{ 25 | calculate:'sqrt' }}</span><br>
+    
+        <label>مقدار: </label>
+        <span class='mark5'>{{ -10 }}</span>
+        <span class="mark6"> با پایپ calculate:abs میشه: </span> 
+        <span class='mark5'>{{ -10 | calculate:'abs' }}</span><br>
+    </div>
+  </div>

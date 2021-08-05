@@ -1,0 +1,56 @@
+@import '../../../assets/styles/colors';
+
+.main {
+    min-height: 450px;
+    padding: 10px 20px;
+    .title {
+        font-size: .9rem;
+        padding: 6px;
+        background:linear-gradient(to left,$Dark_Gray,$Gray,$Dark_Gray);
+        color: $Light_Gray;
+        text-align: center;
+    }
+    label {
+        color: $Orange;
+    }
+    .img-panel {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        div {
+            img {
+                max-width: 100%;
+                height: auto;
+                width: 200px;
+                border-radius: 18px;
+                margin-left: 10px;
+                border: 2px solid transparent;
+            }
+            img.img-border {
+                border-color: $Red;
+            }
+            .caption {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                align-items: center
+            }
+        }
+    }
+    .dark {
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: silver;
+        background-color: $Black;
+        color: $Green;
+        text-align: center;
+    }
+    .light {
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: silver;
+        background-color: $Dark_White;
+        color: $Cherry_Red;
+        text-align: center;
+    }
+}
