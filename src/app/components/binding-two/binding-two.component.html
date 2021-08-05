@@ -1,5 +1,6 @@
 <div class="main">
   <p class="title">هر رویدادی که تو html وجود داره رو میتونیم استفاده کنیم. البته باید نام رویداد رو بدون کلمه ی on و تو پرانتز بنویسیم</p>
+  
   <p class="title">
     تو مثال های پایین از data binding به روش <u>local refrence</u> هم استفاده شده. console رو باز کنید
   </p>
@@ -9,6 +10,7 @@
     <input (change)="onChange(Inp)" placeholder="رویداد onchange" #Inp>
     <input (focus)="onFocus(Inp2)" (blur)="onBlur(Inp2)" placeholder="رویداد onFocus" #Inp2>
   </div>
+
   <br><br>
   <p class="title">
     یه مثال کاربردی از <u>local refrence</u> 
@@ -26,6 +28,7 @@
     <br>
     <button class="btn1" (click)="register(fullName,phone,levelOfEducation)">ثبت اطلاعات</button>
   </div>
+  
   <br>
   <div>
     <span class="mark1">{{person.fullName}}</span>
