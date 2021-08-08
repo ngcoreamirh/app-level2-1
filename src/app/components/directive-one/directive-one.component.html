@@ -1,4 +1,8 @@
 <div class="main">
+  <p class="title">
+    دایرکتیو ها روی یک المان تو صفحه تمپلیت اعمال میشن و  تغییراتی روی المان و محتویاتش به وجود میارن
+    تو مثال های پایین دایرکتیو های آماده ی خود انگولار رو میتونید ببینید
+  </p>
   <p class="title">ngIf*</p>
   <div>
     <label>وضعیت تأهل؟ </label>
@@ -14,7 +18,7 @@
 
     <input type="text" *ngIf="maritalStatusSelected == '2' || maritalStatusSelected == '3'" [(ngModel)]="dateOfMarriage"
            placeholder="تاریخ عقد را وارد کنید">
-    <small *ngIf="dateOfMarriage == '' && maritalStatusSelected == '2' || maritalStatusSelected == '3'">
+    <small *ngIf="dateOfMarriage == '' && (maritalStatusSelected == '2' || maritalStatusSelected == '3')">
       تاریخ عقد نمی تواند خالی باشد
     </small>
   </div>

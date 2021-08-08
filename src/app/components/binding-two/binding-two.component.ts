@@ -9,6 +9,8 @@ import { Person } from '../../models/person.model';
 })
 export class BindingTwoComponent implements OnInit {
 
+  // ،چون تو صفحه تمپلیت یا همون اچ تی ام المون  از این شی استفاده کردیم
+  // اگر شی رو نیو نکنیم بهمون خطا میده، چون نمیتونه پراپرتی های داخل شی رو بشناسه
   person: Person = new Person();
   levelOfEducationEnum = LevelOfEducationEnum;
 

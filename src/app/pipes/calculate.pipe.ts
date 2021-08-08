@@ -5,6 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CalculatePipe implements PipeTransform {
 
+  // وقتی پایپی رو میسازید، این متد به صورت پیشفرض توش هست
+  // پارامتر اولش محتویات اون متغیری هست که پایپ روش اعمال شده
+  // متغیر دوم هم پارامترهایی هست که میتونیم بهش پاس بدیم
+
   transform(value: number, ...args: unknown[]): unknown {
 
     let res;

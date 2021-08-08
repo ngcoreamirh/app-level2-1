@@ -16,7 +16,10 @@ export class BindingFourComponent implements OnInit {
   @ViewChild("NumberInp2") NumberInp2: ElementRef<HTMLInputElement>;
 
   constructor(private renderer: Renderer2) {
-
+    // ،وقتی یه کلاسی رو تو کانستراکتور به روش بالا تعریف میکنیم
+    // در واقع اون کلاس رو تو کامپوننتمون اینجکت یا تزریق کردیم. بهش میگن
+    // Dependency Injection
+    // بعدا با این مبحث شیرین و ساده و پرکاربرد بیشتر آشنا میشیم
   }
 
   ngOnInit() {

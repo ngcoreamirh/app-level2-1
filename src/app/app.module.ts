@@ -20,6 +20,7 @@ import { CalculatePipe } from './pipes/calculate.pipe';
   declarations: [
     AppComponent,
 
+    // components
     BindingOneComponent,
     BindingTwoComponent,
     BindingThreeComponent,
@@ -29,8 +30,11 @@ import { CalculatePipe } from './pipes/calculate.pipe';
     PipeOneComponent,
     PipeTwoComponent,
 
+    // directives
     MarkTextDirective,
     MarkHashtagDirective,
+
+    // pipes
     EmojiToScorePipe,
     CalculatePipe
   ],

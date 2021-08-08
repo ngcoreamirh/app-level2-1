@@ -7,10 +7,10 @@ export class MarkTextDirective {
   
   constructor(private Element: ElementRef, private renderer: Renderer2) {
     
-    renderer.setStyle(Element.nativeElement,'background-color', 'yellow');
-    renderer.setStyle(Element.nativeElement,'color', 'black');
-    renderer.setStyle(Element.nativeElement,'padding', '3px 7px');
-    renderer.setStyle(Element.nativeElement,'border-radius', '9px');
+    renderer.setStyle(Element.nativeElement, 'background-color', 'yellow');
+    renderer.setStyle(Element.nativeElement, 'color', 'black');
+    renderer.setStyle(Element.nativeElement, 'padding', '3px 7px');
+    renderer.setStyle(Element.nativeElement, 'border-radius', '9px');
 
   }
 

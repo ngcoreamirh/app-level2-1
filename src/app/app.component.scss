@@ -120,24 +120,6 @@ header {
             border-radius: 18px;
         }
     }
-    .box-item1 {
-        @extend .box-item;
-    }
-    .box-item2 {
-        @extend .box-item;
-    }
-    .box-item3 {
-        @extend .box-item;
-    }
-    .box-item4 {
-        @extend .box-item;
-    }
-    .box-item5 {
-        @extend .box-item;
-    }
-    .box-item6 {
-        @extend .box-item;
-    }
 }
 
 
@@ -206,22 +188,19 @@ footer {
     height: 300px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
     justify-content: center;
     align-items: center;
-    div {
-        border: 2px solid $Light_Gray;
+    img {
+        object-fit: cover;
+        object-position: top;
         border-radius: 100px;
-        padding: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 135px;
+        height: 135px;
+        transition: .4s;
+    }
+    &:hover {
         img {
-            object-fit: cover;
-            object-position: top;
-            border-radius: 100px;
-            width: 130px;
-            height: 130px;
+            box-shadow: 0 30px 40px $Gray;
         }
     }
 }
